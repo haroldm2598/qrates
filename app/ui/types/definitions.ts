@@ -8,3 +8,9 @@ export interface test {
 	desktop: icons[];
 	mobile: icons[];
 }
+
+export interface links {
+	name: string;
+	path: string;
+	bgImg: string;
+}

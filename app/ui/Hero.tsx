@@ -1,9 +1,10 @@
 import heroImg from '@/app/assets/images/home/heroImage.avif';
 import imgSrc from '@/app/assets/images/home/ok.png';
+import ImageTilt from '../components/ImageTilt';
 
 export default function Hero() {
 	return (
-		<section className='p-4 lg:px-8 lg:py-4 flex flex-col lg:flex-row gap-28'>
+		<section className='mb-10 p-4 lg:px-8 lg:py-4 flex flex-col lg:flex-row gap-28'>
 			<div className='max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start gap-10 text-center lg:text-start '>
 				<h1 className='w-[28rem] text-7xl font-bold leading-[4.375rem]'>
 					QRATES MUSIC IN YOUR HANDS
@@ -23,16 +24,10 @@ export default function Hero() {
 			</div>
 
 			<div className='max-w-lg mx-auto lg:mx-0 relative'>
-				<img
-					src={heroImg.src}
-					alt='hero image'
-					className='max-w-[330px] lg:max-w-[550px] max-h-[75vh] rotate-[10deg] border-2 border-solid border-black'
-				/>
-
-				<img
-					src={imgSrc.src}
-					alt='okay'
-					className='absolute top-[40%] left-[-10%] z-1 w-36 h-36'
+				<ImageTilt
+					mainImg={heroImg.src}
+					subImg={imgSrc.src}
+					rotateMain='rotate-[10deg]'
 				/>
 
 				<h1 className='absolute top-[50%] right-[-35%] lg:right-[-80%] text-base font-bold rotate-90'>

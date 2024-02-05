@@ -16,7 +16,7 @@ import Link from 'next/link';
 import QratesLogo from '@/app/assets/images/qrates-logo.svg';
 import { inria_sans } from '@/app/ui/font';
 
-import { test } from '@/app/ui/components/Navbar.types';
+import { test } from '@/app/ui/types/definitions';
 
 export default function Navbar() {
 	const [isClick, setIsClick] = useState<boolean>();
