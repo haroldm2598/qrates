@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import '@/app/assets/styles/main.scss';
-import { inter } from '@/app/ui/font';
+import { inria_sans } from '@/app/ui/font';
 import Navbar from '@/app/components/Navbar';
 import Footer from './components/Footer';
+import { ReduxProvider } from './StoreProvider';
 
 export const metadata: Metadata = {
 	title: 'Qrates',
@@ -16,10 +17,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
-				<Navbar />
-				{children}
-				<Footer />
+			<body className={inria_sans.className}>
+				<ReduxProvider>
+					<Navbar />
+					{children}
+					<Footer />
+				</ReduxProvider>
 			</body>
 		</html>
 	);

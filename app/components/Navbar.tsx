@@ -1,42 +1,19 @@
 'use client';
 import { useState } from 'react';
 import { IoClose, IoMenuOutline } from 'react-icons/io5';
-import {
-	FaMagnifyingGlass,
-	FaCartShopping,
-	FaFacebook,
-	FaSquareInstagram,
-	FaSquareTwitter
-} from 'react-icons/fa6';
+
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAppSelector } from '@/lib/redux/store';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 import QratesLogo from '@/app/assets/images/qrates-logo.svg';
-import { inria_sans } from '@/app/ui/font';
-
-import { test } from '@/app/ui/types/definitions';
 
 export default function Navbar() {
+	const { navLinks, Icons } = useAppSelector((state) => state.homeTemplate);
+
 	const [isClick, setIsClick] = useState<boolean>();
-	const Links = [
-		{ name: 'discover music', path: '/discover' },
-		{ name: 'for artists', path: '/forartists' },
-		{ name: 'for fans', path: '/forfans' }
-	];
-
-	const Icons: Array<test> = [
-		{
-			desktop: [{ Icon: FaMagnifyingGlass }, { Icon: FaCartShopping }],
-			mobile: [
-				{ Icon: FaFacebook },
-				{ Icon: FaSquareInstagram },
-				{ Icon: FaSquareTwitter }
-			]
-		}
-	];
-
 	const handleMenuClick = () => {
 		setIsClick(!isClick);
 	};
@@ -59,15 +36,11 @@ export default function Navbar() {
 				</figure>
 
 				<ul className='hidden lg:flex items-center gap-8'>
-					{Links.map((link) => {
+					{navLinks.map((link) => {
 						return (
 							<li key={link.name}>
 								<Link href={link.path}>
-									<span
-										className={`${inria_sans.className} font-bold uppercase`}
-									>
-										{link.name}
-									</span>
+									<span className={`font-bold uppercase`}>{link.name}</span>
 								</Link>
 							</li>
 						);
@@ -86,12 +59,12 @@ export default function Navbar() {
 
 			<div className='hidden lg:flex gap-2'>
 				<button
-					className={`${inria_sans.className} btn btn-outline text-base font-bold uppercase rounded-full`}
+					className={`btn btn-outline text-base font-bold uppercase rounded-full`}
 				>
 					log in
 				</button>
 				<button
-					className={`${inria_sans.className} btn btn-neutral text-white text-base font-bold uppercase rounded-full`}
+					className={`btn btn-neutral text-white text-base font-bold uppercase rounded-full`}
 				>
 					make your own
 				</button>
@@ -112,10 +85,10 @@ export default function Navbar() {
 							transition={{ delay: 0.3, type: 'tween', stiffness: 120 }}
 						>
 							<ul className='px-4 py-6 flex flex-col gap-10'>
-								{Links?.map((item, index) => (
+								{navLinks?.map((item, index) => (
 									<motion.li
 										key={index}
-										className={`${inria_sans.className} text-2xl font-bold uppercase`}
+										className={`text-2xl font-bold uppercase`}
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}
@@ -139,12 +112,12 @@ export default function Navbar() {
 
 							<div className='px-4 flex flex-col gap-2'>
 								<button
-									className={`${inria_sans.className} btn btn-neutral text-base font-bold uppercase rounded-full`}
+									className={`btn btn-neutral text-base font-bold uppercase rounded-full`}
 								>
 									make your record
 								</button>
 								<button
-									className={`${inria_sans.className} btn btn-outline text-base font-bold uppercase rounded-full`}
+									className={`btn btn-outline text-base font-bold uppercase rounded-full`}
 								>
 									log in
 								</button>

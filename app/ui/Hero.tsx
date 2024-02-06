@@ -7,12 +7,12 @@ import ImageTilt from '../components/ImageTilt';
 
 export default function Hero() {
 	return (
-		<section className='mb-10 p-4 lg:px-8 lg:py-4 flex flex-col lg:flex-row gap-28'>
+		<section className='mb-10 p-4 lg:px-8 lg:py-4 flex flex-col lg:flex-row gap-10 xl:gap-28'>
 			<div className='max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start gap-10 text-center lg:text-start '>
 				<h1 className='lg:w-[28rem] text-5xl lg:text-7xl font-bold leading-[3rem] lg:leading-[4.375rem]'>
 					QRATES MUSIC IN YOUR HANDS
 				</h1>
-				<p className='text-3xl leading-9'>
+				<p className='lg:min-w-96 xl:w-full text-3xl leading-9'>
 					We make it easy for artists to make vinyl and cassettes, so fans can
 					keep pieces of the music they love ↓
 				</p>
@@ -33,7 +33,7 @@ export default function Hero() {
 					rotateMain='rotate-[10deg]'
 				/>
 
-				<h1 className='absolute top-[50%] right-[-35%] lg:right-[-80%] text-base font-bold rotate-90'>
+				<h1 className='absolute top-[50%] right-[-35%] md:right-[-50%] lg:right-[-80%] text-base font-bold rotate-90'>
 					<span className='underline'>MAYAEWKIS</span> ON QRATES
 				</h1>
 			</div>

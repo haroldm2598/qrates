@@ -1,12 +1,9 @@
+'use client';
+import { useAppSelector } from '@/lib/redux/store';
 import BgChange from '../components/BgChange';
 
 export default function Forfans() {
-	const linkFans = [
-		{ name: 'Records', path: '/', bgImg: 'bg-slate-200' },
-		{ name: 'Cassettes', path: '/', bgImg: 'bg-slate-300' },
-		{ name: 'Stories', path: '/', bgImg: 'bg-slate-400' },
-		{ name: 'Qrates Curated', path: '/', bgImg: 'bg-slate-500' }
-	];
+	const { linkFans } = useAppSelector((state) => state.homeTemplate);
 
 	return (
 		<>
