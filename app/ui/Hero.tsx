@@ -2,11 +2,14 @@ import heroImg from '@/app/assets/images/home/heroImage.avif';
 import imgSrc from '@/app/assets/images/home/ok.png';
 import ImageTilt from '../components/ImageTilt';
 
+// the problem with the hero content
+// is not responsive with the content relative absolute in large screen only appears in extra large screen
+
 export default function Hero() {
 	return (
 		<section className='mb-10 p-4 lg:px-8 lg:py-4 flex flex-col lg:flex-row gap-28'>
 			<div className='max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start gap-10 text-center lg:text-start '>
-				<h1 className='w-[28rem] text-7xl font-bold leading-[4.375rem]'>
+				<h1 className='lg:w-[28rem] text-5xl lg:text-7xl font-bold leading-[3rem] lg:leading-[4.375rem]'>
 					QRATES MUSIC IN YOUR HANDS
 				</h1>
 				<p className='text-3xl leading-9'>

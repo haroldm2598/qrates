@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/app/assets/styles/main.scss';
 import { inter } from '@/app/ui/font';
 import Navbar from '@/app/components/Navbar';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
 	title: 'Qrates',
@@ -18,6 +19,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

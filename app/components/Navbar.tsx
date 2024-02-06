@@ -39,10 +39,11 @@ export default function Navbar() {
 
 	const handleMenuClick = () => {
 		setIsClick(!isClick);
-		isClick
-			? (document.body.style.overflow = 'hidden')
-			: (document.body.style.overflow = 'auto');
 	};
+
+	// isClick
+	// 	? (document.body.style.overflow = 'hidden')
+	// 	: (document.body.style.overflow = 'auto');
 
 	return (
 		<header className='p-4 md:p-8 flex items-center justify-between'>
@@ -71,16 +72,6 @@ export default function Navbar() {
 							</li>
 						);
 					})}
-
-					{/* {Icons[0].desktop.map((icon, index) => {
-						const Icon = icon.Icon;
-
-						return (
-							<li key={index}>
-								<Icon size={20} />
-							</li>
-						);
-					})} */}
 
 					{Icons[0].desktop.map((icon, index) => {
 						const Icon = icon.Icon;
