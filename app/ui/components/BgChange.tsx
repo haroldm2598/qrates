@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { links } from '@/app/ui/types/definitions';
+import { links } from '@/lib/types/definitions';
 import { useState } from 'react';
 
 interface DataProps {

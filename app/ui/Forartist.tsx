@@ -1,6 +1,6 @@
 import heroImg from '@/app/assets/images/home/heroImage.avif';
 import imgSrc from '@/app/assets/images/home/fast.png';
-import ImageTilt from '../components/ImageTilt';
+import ImageTilt from './components/ImageTilt';
 
 export default function Forartist() {
 	return (

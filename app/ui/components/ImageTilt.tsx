@@ -2,13 +2,15 @@ import { StaticImageData } from 'next/image';
 
 interface forImageTilt {
 	mainImg: string;
-	subImg: string;
+	subImg?: string | undefined;
 	rotateMain: string;
+	customPosSub?: string | undefined;
 }
 export default function ImageTilt({
 	mainImg,
 	subImg,
-	rotateMain
+	rotateMain,
+	customPosSub
 }: forImageTilt) {
 	return (
 		<>
@@ -18,11 +20,13 @@ export default function ImageTilt({
 				className={`max-w-[250px] lg:max-w-[550px] max-h-[75vh] border-2 border-solid border-black ${rotateMain}`}
 			/>
 
-			<img
-				src={subImg}
-				alt='okay'
-				className='absolute top-[40%] left-[-10%] z-1 w-20 h-20 lg:w-36 lg:h-36'
-			/>
+			{subImg && (
+				<img
+					src={subImg}
+					alt='okay'
+					className={`${customPosSub} absolute top-[40%] left-[-10%] z-50 w-20 h-20 lg:w-36 lg:h-36`}
+				/>
+			)}
 		</>
 	);
 }

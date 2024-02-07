@@ -1,6 +1,6 @@
 import heroImg from '@/app/assets/images/home/heroImage.avif';
 import imgSrc from '@/app/assets/images/home/ok.png';
-import ImageTilt from '../components/ImageTilt';
+import ImageTilt from './components/ImageTilt';
 
 // the problem with the hero content
 // is not responsive with the content relative absolute in large screen only appears in extra large screen

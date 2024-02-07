@@ -1,9 +1,10 @@
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import homeReducer from './features/homepage/homeSlice';
+import artistReducer from './features/artists/artistSlice';
 
 export const store = configureStore({
-	reducer: { homeTemplate: homeReducer }
+	reducer: { homeTemplate: homeReducer, artistTemplate: artistReducer }
 });
 
 export type RootState = ReturnType<typeof store.getState>;

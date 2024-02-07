@@ -7,7 +7,22 @@ $mainColor--200: #e280ff;
 $mainColor--300: #81836c;
 $mainColor--400: #000000;
 $mainColor--500: #ffffff;
+$mainColor--600: #e4e5de;
+$mainColor--700: #f8d8d8;
 
 .homeArtist {
 	background-color: $mainColor--100;
+}
+
+// for artist page
+.musicGroup1 {
+	background-color: $mainColor--600;
+}
+
+.artistResource1 {
+	background-color: $mainColor--300;
+}
+
+.artistResource2 {
+	background-color: $mainColor--700;
 }

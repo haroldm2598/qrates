@@ -1,6 +1,6 @@
 'use client';
 import { useAppSelector } from '@/lib/redux/store';
-import BgChange from '../components/BgChange';
+import BgChange from './components/BgChange';
 
 export default function Artisttoolkit() {
 	const { linkArtist } = useAppSelector((state) => state.homeTemplate);

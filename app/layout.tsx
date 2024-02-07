@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import '@/app/assets/styles/main.scss';
 import { inria_sans } from '@/app/ui/font';
-import Navbar from '@/app/components/Navbar';
-import Footer from './components/Footer';
+import Navbar from '@/app/ui/components/Navbar';
+import Footer from './ui/components/Footer';
 import { ReduxProvider } from './StoreProvider';
 
 export const metadata: Metadata = {

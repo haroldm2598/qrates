@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { InitialState } from '@/app/ui/types/definitions';
+import { InitialState } from '@/lib/types/definitions';
 
 import gridImg1 from '@/app/assets/images/home/grid1.avif';
 import gridImg2 from '@/app/assets/images/home/grid2.avif';
