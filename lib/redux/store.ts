@@ -4,7 +4,9 @@ import homeReducer from './features/homepage/homeSlice';
 import artistReducer from './features/artists/artistSlice';
 
 export const store = configureStore({
-	reducer: { homeTemplate: homeReducer, artistTemplate: artistReducer }
+	reducer: { homeTemplate: homeReducer, artistTemplate: artistReducer },
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware({ serializableCheck: false })
 });
 
 export type RootState = ReturnType<typeof store.getState>;

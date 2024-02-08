@@ -9,12 +9,23 @@ $mainColor--400: #000000;
 $mainColor--500: #ffffff;
 $mainColor--600: #e4e5de;
 $mainColor--700: #f8d8d8;
+$mainColor--800: rgb(255, 103, 17);
 
 .homeArtist {
 	background-color: $mainColor--100;
 }
 
 // for artist page
+.musicInfo {
+	background: linear-gradient(
+		to right,
+		#e4e5de,
+		#e4e5de 50%,
+		#fff804 50%,
+		#fff804
+	);
+}
+
 .musicGroup1 {
 	background-color: $mainColor--600;
 }
@@ -25,4 +36,8 @@ $mainColor--700: #f8d8d8;
 
 .artistResource2 {
 	background-color: $mainColor--700;
+}
+
+.testimonalBg {
+	background-color: $mainColor--800;
 }

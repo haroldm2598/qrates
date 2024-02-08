@@ -49,25 +49,38 @@ export interface gridImgProps {
 }
 // ==== forArtistSlice ====
 export interface ArtistInitialState {
+	currentState: number;
 	value: { id: string; name: string; isClick: boolean };
 	makeMusicList: Array<MusicGroup>;
+	TestimonalList: Array<TestimonalListProps>;
 }
 
 interface MusicGroup {
 	firstGroup: Array<MakeMusicProps>;
 	secondGroup: Array<MakeMusicProps>;
+	desktopFirst: Array<MakeMusicProps>;
+	desktopSecond: Array<MakeMusicProps>;
 }
 
 interface MakeMusicProps {
-	countNum: number;
-	title: string;
+	countNum?: number | undefined;
+	title?: string;
 	content: Array<MusicDetailProps>;
 }
 
 export interface MusicDetailProps {
-	subTitle: string;
-	desc: string;
+	subTitle?: string;
+	desc?: string;
 	imgSrc?: StaticImageData;
+}
+
+interface TestimonalListProps {
+	backgroundColor: string;
+	imageSrc: StaticImageData;
+	desc: string;
+	authorName: string;
+	buttonName: string;
+	countNum: number;
 }
 
 export interface gridCardProps {

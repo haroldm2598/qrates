@@ -14,6 +14,10 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 				'forfans': "url('../images/home/subheroImage.avif')",
 				'forartist': "url('../images/home/artistImage.avif')"
+			},
+			colors: {
+				'color-yellow': '#fff804',
+				'color-grey': '#e4e5de'
 			}
 		}
 	},
