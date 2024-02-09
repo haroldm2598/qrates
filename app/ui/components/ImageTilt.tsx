@@ -24,7 +24,7 @@ export default function ImageTilt({
 				<img
 					src={subImg}
 					alt='okay'
-					className={`${customPosSub} absolute top-[40%] left-[-10%] z-50 w-20 h-20 lg:w-36 lg:h-36`}
+					className={`${customPosSub} absolute top-[40%] left-[-10%] z-20 w-20 h-20 lg:w-36 lg:h-36`}
 				/>
 			)}
 		</>

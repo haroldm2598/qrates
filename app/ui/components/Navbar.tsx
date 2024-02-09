@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoClose, IoMenuOutline } from 'react-icons/io5';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,18 +9,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import QratesLogo from '@/app/assets/images/qrates-logo.svg';
+import DisableBodyScroll from './DisableScroll';
 
 export default function Navbar() {
 	const { navLinks, Icons } = useAppSelector((state) => state.homeTemplate);
+	const [isClick, setIsClick] = useState<boolean>(false);
 
-	const [isClick, setIsClick] = useState<boolean>();
 	const handleMenuClick = () => {
 		setIsClick(!isClick);
 	};
 
-	// isClick
-	// 	? (document.body.style.overflow = 'hidden')
-	// 	: (document.body.style.overflow = 'auto');
+	useEffect(() => {
+		isClick
+			? document.body.classList.add('overflow-y-hidden')
+			: document.body.classList.add('overflow-y-auto');
+	});
 
 	return (
 		<header className='p-4 md:p-8 flex items-center justify-between'>
@@ -93,7 +96,9 @@ export default function Navbar() {
 										animate={{ opacity: 1 }}
 										transition={{ delay: 0.4, type: 'tween', stiffness: 90 }}
 									>
-										<Link href={item.path}>{item.name}</Link>
+										<Link href={item.path} onClick={() => setIsClick(!isClick)}>
+											{item.name}
+										</Link>
 									</motion.li>
 								))}
 							</ul>

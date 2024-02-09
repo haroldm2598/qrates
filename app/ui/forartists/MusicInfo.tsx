@@ -92,9 +92,9 @@ export default function MusicInfo() {
 					/>
 				</div>
 
-				{makeMusicList[0].firstGroup.map((item) => {
+				{makeMusicList[0].firstGroup.map((item, index) => {
 					return (
-						<div className='mb-[5rem] flex gap-3'>
+						<div className='mb-[5rem] flex gap-3' key={index}>
 							<div className='relative'>
 								<ArrowDown num={item.countNum} />
 							</div>
@@ -112,9 +112,9 @@ export default function MusicInfo() {
 						/>
 					</div>
 
-					{makeMusicList[0].secondGroup.map((item) => {
+					{makeMusicList[0].secondGroup.map((item, index) => {
 						return (
-							<div className='mb-[5rem] flex gap-3'>
+							<div className='mb-[5rem] flex gap-3' key={index}>
 								<div className='relative'>
 									<ArrowDown num={item.countNum} />
 								</div>
