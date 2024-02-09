@@ -21,6 +21,7 @@ export interface InitialState {
 	linkArtist: Array<links>;
 	gridImg: Array<gridImgProps>;
 	policies: Array<string>;
+	qratesCarousel: Array<gridImgProps>;
 }
 
 export interface HomeState {
@@ -47,6 +48,7 @@ export interface links {
 export interface gridImgProps {
 	imgSrc: StaticImageData;
 }
+
 // ==== forArtistSlice ====
 export interface ArtistInitialState {
 	currentState: number;
@@ -87,4 +89,20 @@ export interface gridCardProps {
 	title: string;
 	description: string;
 	imageSource: StaticImageData;
+}
+
+// ==== fansSlice ====
+export interface FansInitialState {
+	value: number;
+	featureItems: Array<FeaturesProps>;
+}
+
+export interface FeaturesProps {
+	backgroundColor: string;
+	category: string;
+	title: string;
+	desc: string;
+	imageSrc: StaticImageData;
+	orderAside?: string;
+	orderMain?: string;
 }

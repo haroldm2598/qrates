@@ -1,7 +1,10 @@
-import carouselImg from '@/app/assets/images/home/sample_female-a4d2352d.png';
-// make an array for carousel image auto play
+'use client';
+import { useAppSelector } from '@/lib/redux/store';
+import { Carousel } from 'flowbite-react';
 
 export default function QratesStudio() {
+	const { qratesCarousel } = useAppSelector((state) => state.homeTemplate);
+
 	return (
 		<section className='bg-black'>
 			<div className='max-w-3xl w-full mx-auto px-4 py-10 text-center'>
@@ -20,12 +23,19 @@ export default function QratesStudio() {
 					</p>
 				</div>
 
-				<div className='my-2'>
-					<img
-						src={carouselImg.src}
-						alt='carousel image'
-						className='block w-96 h-96 object-contain mx-auto'
-					/>
+				<div className='my-2 w-96 h-96 mx-auto'>
+					<Carousel indicators={false} slideInterval={1000}>
+						{qratesCarousel.map((item, index) => {
+							return (
+								<img
+									key={index}
+									src={item.imgSrc.src}
+									alt='carousel image'
+									className='block w-full h-full object-contain '
+								/>
+							);
+						})}
+					</Carousel>
 				</div>
 
 				<button className='w-full lg:w-72 btn btn-warning font-bold uppercase rounded-full'>

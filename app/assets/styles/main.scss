@@ -10,6 +10,12 @@ $mainColor--500: #ffffff;
 $mainColor--600: #e4e5de;
 $mainColor--700: #f8d8d8;
 $mainColor--800: rgb(255, 103, 17);
+$mainColor--900: rgb(220, 253, 213);
+
+html,
+body {
+	overflow-x: hidden;
+}
 
 .homeArtist {
 	background-color: $mainColor--100;
@@ -40,4 +46,14 @@ $mainColor--800: rgb(255, 103, 17);
 
 .testimonalBg {
 	background-color: $mainColor--800;
+}
+
+.features1 {
+	background-color: $mainColor--900;
+}
+.features2 {
+	background-color: $mainColor--600;
+}
+.features3 {
+	background-color: $mainColor--700;
 }

@@ -2,9 +2,14 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import homeReducer from './features/homepage/homeSlice';
 import artistReducer from './features/artists/artistSlice';
+import fansReducer from './features/fans/fanSlice';
 
 export const store = configureStore({
-	reducer: { homeTemplate: homeReducer, artistTemplate: artistReducer },
+	reducer: {
+		homeTemplate: homeReducer,
+		artistTemplate: artistReducer,
+		fansTemplate: fansReducer
+	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({ serializableCheck: false })
 });

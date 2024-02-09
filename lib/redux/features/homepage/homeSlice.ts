@@ -1,5 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState } from '@/lib/types/definitions';
+import {
+	FaMagnifyingGlass,
+	FaCartShopping,
+	FaFacebook,
+	FaSquareInstagram,
+	FaSquareTwitter
+} from 'react-icons/fa6';
 
 import gridImg1 from '@/app/assets/images/home/grid1.avif';
 import gridImg2 from '@/app/assets/images/home/grid2.avif';
@@ -10,13 +17,12 @@ import gridImg6 from '@/app/assets/images/home/grid6.avif';
 import gridImg7 from '@/app/assets/images/home/grid7.avif';
 import gridImg8 from '@/app/assets/images/home/grid8.avif';
 
-import {
-	FaMagnifyingGlass,
-	FaCartShopping,
-	FaFacebook,
-	FaSquareInstagram,
-	FaSquareTwitter
-} from 'react-icons/fa6';
+import carouselImg1 from '@/app/assets/images/home/sample_4dilla-d886be83.png';
+import carouselImg2 from '@/app/assets/images/home/sample_all_india-36327a32.png';
+import carouselImg3 from '@/app/assets/images/home/sample_black_country_disco-233bbc85.png';
+import carouselImg4 from '@/app/assets/images/home/sample_blarney-469831b2.png';
+import carouselImg5 from '@/app/assets/images/home/sample_bombay-668a0fa8.png';
+import carouselImg6 from '@/app/assets/images/home/sample_female-a4d2352d.png';
 
 const initialState: InitialState = {
 	value: {
@@ -96,14 +102,22 @@ const initialState: InitialState = {
 		{ imgSrc: gridImg7 },
 		{ imgSrc: gridImg8 }
 	],
-	policies: ['Terms of service', 'Privacy Policy', 'Legal Information']
+	policies: ['Terms of service', 'Privacy Policy', 'Legal Information'],
+	qratesCarousel: [
+		{ imgSrc: carouselImg1 },
+		{ imgSrc: carouselImg2 },
+		{ imgSrc: carouselImg3 },
+		{ imgSrc: carouselImg4 },
+		{ imgSrc: carouselImg5 },
+		{ imgSrc: carouselImg6 }
+	]
 };
 
 export const data = createSlice({
 	name: 'home',
 	initialState,
 	reducers: {
-		test: (state, action) => {
+		test: (state, action: PayloadAction<boolean>) => {
 			state.value.isClick = action.payload;
 		}
 	}

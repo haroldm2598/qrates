@@ -20,7 +20,7 @@ export default function Testimonal() {
 					return (
 						<AnimatePresence key={item.countNum}>
 							<motion.section
-								className={`${item.backgroundColor} p-10 lg:min-h-screen border-t-2 border-black`}
+								className={`${item.backgroundColor} p-10 lg:min-h-screen border-y-2 border-black`}
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}
