@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 interface DataProps {
 	data: Array<links>;
-	// customBg: string;
+	customBg?: string;
 	btnName: string;
 	cta: string;
 }
