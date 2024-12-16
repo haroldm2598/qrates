@@ -5,12 +5,12 @@ import { useState } from 'react';
 
 interface DataProps {
 	data: Array<links>;
-	customBg: string;
+	// customBg: string;
 	btnName: string;
 	cta: string;
 }
 
-export default function BgChange({ data, customBg, btnName, cta }: DataProps) {
+export default function BgChange({ data, btnName, cta }: DataProps) {
 	const [isChange, setIsChange] = useState('');
 
 	const handleChangeBg = (dataIndex: number) => {
@@ -24,7 +24,7 @@ export default function BgChange({ data, customBg, btnName, cta }: DataProps) {
 	return (
 		<div
 			className={`${
-				isChange.length > 0 ? isChange : customBg
+				isChange.length > 0 ? isChange : 'bg-forfans1'
 			} bg-cover bg-center max-w-full h-[70vh] lg:h-[90vh] p-4 lg:p-8 flex flex-col justify-between items-start`}
 		>
 			<button className='btn btn-outline text-sm font-bold text-white uppercase rounded-none'>

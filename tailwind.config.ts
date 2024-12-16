@@ -13,7 +13,10 @@ const config: Config = {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'forfans': "url('../images/home/subheroImage.avif')",
+				'forfans1': "url('../images/home/subheroImage.avif')",
+				'forfans2': "url('../images/home/records.jpg')",
+				'forfans3': "url('../images/home/cassete.jpg')",
+				'forfans4': "url('../images/home/stories.jpg')",
 				'forartist': "url('../images/home/artistImage.avif')"
 			},
 			colors: {

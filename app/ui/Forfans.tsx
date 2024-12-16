@@ -8,7 +8,7 @@ export default function Forfans() {
 	return (
 		<>
 			<BgChange
-				customBg='bg-forfans'
+				// customBg='bg-forfans1'
 				data={linkFans}
 				btnName='for fans'
 				cta='The latest from the Qrates community'

@@ -24,6 +24,11 @@ import carouselImg4 from '@/app/assets/images/home/sample_blarney-469831b2.png';
 import carouselImg5 from '@/app/assets/images/home/sample_bombay-668a0fa8.png';
 import carouselImg6 from '@/app/assets/images/home/sample_female-a4d2352d.png';
 
+import fansImg1 from '@/app/assets/images/home/sample_black_country_disco-233bbc85.png';
+import fansImg2 from '@/app/assets/images/home/sample_blarney-469831b2.png';
+import fansImg3 from '@/app/assets/images/home/sample_bombay-668a0fa8.png';
+import fansImg4 from '@/app/assets/images/home/sample_female-a4d2352d.png';
+
 const initialState: InitialState = {
 	value: {
 		id: '',
@@ -80,10 +85,10 @@ const initialState: InitialState = {
 		}
 	],
 	linkFans: [
-		{ name: 'Records', path: '/', bgImg: 'bg-slate-200' },
-		{ name: 'Cassettes', path: '/', bgImg: 'bg-slate-300' },
-		{ name: 'Stories', path: '/', bgImg: 'bg-slate-400' },
-		{ name: 'Qrates Curated', path: '/', bgImg: 'bg-slate-500' }
+		{ name: 'Records', path: '/', bgImg: 'bg-forfans1' },
+		{ name: 'Cassettes', path: '/', bgImg: 'bg-forfans2' },
+		{ name: 'Stories', path: '/', bgImg: 'bg-forfans3' },
+		{ name: 'Qrates Curated', path: '/', bgImg: 'bg-forfans4' }
 	],
 	linkArtist: [
 		{ name: 'Vinyl Knowledge', path: '/', bgImg: 'bg-slate-50' },
